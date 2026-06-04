@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import mimetypes
 import warnings
 from datetime import datetime
 from pathlib import Path
@@ -12,6 +13,8 @@ import pandas as pd
 import streamlit as st
 
 warnings.filterwarnings("ignore")
+mimetypes.add_type("application/javascript", ".js")
+mimetypes.add_type("text/css", ".css")
 
 from utils.preprocessing import (
     COUNTRY_OPTIONS,
